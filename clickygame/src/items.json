@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "image": "http://images5.fanpop.com/image/photos/31000000/picture-cartoon-characters-31032350-225-225.png",
+        "name":"PowderPuff Girl",
+        "clicked":"false"
+    },
+    {
+        "id": 1,
+        "image": "https://i.pinimg.com/236x/61/9f/12/619f12020a3ac0ce7e42636bde65d93d--vintage-cartoon-cartoon-characters.jpg",
+        "name":"Mighty Mouse",
+        "clicked":"false"
+    },
+    {
+        "id": 2,
+        "image": "https://i.pinimg.com/236x/2d/19/67/2d19676f9b30c02867bf2b9df8794a7c--disney-world-vacation-disney-vacations.jpg",
+        "name":"Goofy",
+        "clicked":"false"
+    },
+    {
+        "id": 3,
+        "image": "https://i.pinimg.com/236x/f3/b3/c8/f3b3c857c8e204ed3557f109ab32945f--jerry-oconnell-cartoon-characters.jpg",
+        "name":"Jerry",
+        "clicked":"false"
+    },
+    {
+        "id": 4,
+        "image": "http://images6.fanpop.com/image/polls/1549000/1549962_1459067279276_full.png",
+        "name":"Pikachu",
+        "clicked":"false"
+    },
+    {
+        "id": 5,
+        "image": "https://s-media-cache-ak0.pinimg.com/originals/84/f6/5c/84f65c0a190a74fb52ec877db2832cdd.jpg",
+        "name":"Bird",
+        "clicked":"false"
+    },
+    {
+        "id": 6,
+        "image": "https://www.wikihow.com/images/thumb/1/1a/User-Completed-Image-Create-Your-Own-Cartoon-Character-2018.09.14-15.13.27.0.png/-crop-225-225-225px-User-Completed-Image-Create-Your-Own-Cartoon-Character-2018.09.14-15.13.27.0.png",
+        "name":"Wolf",
+        "clicked":"false"
+    },
+    {
+        "id": 7,
+        "image": "https://i.pinimg.com/originals/a5/90/5d/a5905d714026ea486b694e3aca932d13.jpg",
+        "name":"PowderPuff Girl 2",
+        "clicked":"false"
+    },
+    {
+        "id": 8,
+        "image": "https://www.lockhaven.edu/~dsimanek/pseudo/crunch.jpg",
+        "name":"Captain Crunch",
+        "clicked":"false"
+    },
+    {
+        "id": 9,
+        "image": "https://www.babygogo.in/wp-content/uploads/2017/04/bugs-bunny.jpg",
+        "name":"Bugs Bunny",
+        "clicked":"false"
+    }
+]
