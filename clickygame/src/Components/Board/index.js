@@ -19,23 +19,23 @@ export default class Board extends Component {
         }
       }
     
-      handleScore = () => {
+      handleScore = id => {
           console.log("handleScore() running...")
-        // let { clicked } = this.state.clicked;
-        // // let score = this.state.score;
-        // console.log("handleScore running...")
-        // this.setState({score: true})
-        // if(clicked.includes(id)){
-        //   alert("You lost")
-        //   this.setState({ score: 0 })
-        // }
-        // else {
-        //   this.shuffle();
-        //   this.setState({ 
-        //     score: clicked.length,
-        //     clicked: [id, ...this.state.clicked]
-        //   })
-        // }
+        //   console.log(id)
+        // let score = this.state.score;
+        console.log("handleScore running...")
+        this.setState({score: true})
+        if(this.state.clicked.includes(id)){
+          alert("You lost")
+          this.setState({ score: 0 })
+        }
+        else {
+          this.shuffle();
+          this.setState({ 
+            score: this.state.clicked.length,
+            clicked: [id, ...this.state.clicked]
+          })
+        }
       }
 
     render() {
@@ -46,7 +46,7 @@ export default class Board extends Component {
                         key={item.id}
                         name={item.name}
                         image={item.image}
-                        score={() => this.handleScore}
+                        score={() => this.handleScore(item.id)}
                     />
                 ))}
         </div>
