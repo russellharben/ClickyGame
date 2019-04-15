@@ -3,17 +3,43 @@ import './App.css';
 import { Navbar, Nav } from "react-bootstrap";
 import Board from "./Components/Board/index";
 import BoardItems from "./Components/BoardItems/index";
-
+import items from "./items.json";
 
 
 class App extends Component {
 
   state = {
-    score: 0
+    items,
+    score: 0,
+    clicked: []
   }
 
+  shuffle() {
+    for (let i = items.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+  }
 
-  render(props) {
+  handleScore(id){
+    let clicked = this.state.clicked;
+    // let score = this.state.score;
+    console.log("handleScore running...")
+    this.setState({score: true})
+    if(clicked.includes(id)){
+      alert("You lost")
+      this.setState({ score: 0 })
+    }
+    else {
+      this.shuffle();
+      this.setState({ 
+        score: clicked.length,
+        clicked: [id, ...this.state.clicked]
+      })
+    }
+  }
+
+  render() {
     return (
       <div>
         <Navbar bg="dark" variant="dark">
@@ -28,7 +54,12 @@ class App extends Component {
         </Navbar>
         <div className="App">
           <Board>
-            <BoardItems></BoardItems>
+              <BoardItems
+                key={this.state.items.id}
+                image={this.state.items.image}
+                name={this.state.items.name}
+                handleScore={this.handleScore}
+              />
           </Board>
         </div>
       </div>

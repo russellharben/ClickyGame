@@ -5,11 +5,10 @@ import { Card } from "react-bootstrap";
 
 
 function BoardItems(props) {
-
-
+    
     return <div className="itemCard">
-            <Card onClick={props.score} style={{ width: '16rem', cursor:'pointer' }}>
-                <Card.Img tar={props.key} variant="top" src={props.image} />
+            <Card onClick={() => props.handleScore(props.key)} style={{ width: '16rem', cursor:'pointer' }}>
+                <Card.Img data-id={props.key} variant="top" src={props.image} />
                     <Card.Body>
                         <Card.Title>{props.name}</Card.Title>
                     </Card.Body>
