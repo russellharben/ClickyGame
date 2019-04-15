@@ -23,6 +23,21 @@
   color: #61dafb;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width:100%;
+  padding:50px;
+  justify-content:center;
+  grid-auto-rows: minmax(100px, auto);
+  max-width:100%;
+  overflow-x: auto;
+}
+
+.card {
+  border:none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
