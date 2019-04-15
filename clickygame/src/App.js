@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Navbar, Nav } from "react-bootstrap";
 import BoardItems from "./Components/BoardItems/index";
+import Animate from "./Components/Animate/index";
 import items from "./items.json";
 
 class App extends Component {
@@ -28,10 +29,13 @@ class App extends Component {
     //   console.log(id)
     this.state.score++;
 
-    if (this.state.clicked.includes(id) || this.state.score === 10) {
-      alert(`Congrats! You finished with a score of ${this.state.score}`)
+    if (this.state.clicked.includes(id)) {
+      alert(`Congrats! You finished with a score of ${this.state.score - 1}`)
       this.setState({ score: 0 })
       document.getElementById('root').addEventListener("click", this.reload());
+    }
+    else if(this.state.score === 10) {
+      alert("You got them all! You must be some kind of wizard or something.")
     }
     else {
       this.shuffle();
@@ -39,6 +43,7 @@ class App extends Component {
         clicked: [id, ...this.state.clicked]
       })
       console.log(this.state.score);
+      return <Animate />;
     }
   }
 
