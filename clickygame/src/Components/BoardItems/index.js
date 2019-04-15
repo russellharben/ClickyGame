@@ -14,7 +14,6 @@ function BoardItems(props) {
                     </Card.Body>
                 </Card>
             </div>
-
 }
 
 export default BoardItems;

@@ -28,8 +28,8 @@ class App extends Component {
     //   console.log(id)
     this.state.score++;
 
-    if (this.state.clicked.includes(id)) {
-      alert(`Congrats! You finished with a score of ${this.state.score - 1}`)
+    if (this.state.clicked.includes(id) || this.state.score === 10) {
+      alert(`Congrats! You finished with a score of ${this.state.score}`)
       this.setState({ score: 0 })
       document.getElementById('root').addEventListener("click", this.reload());
     }
@@ -48,7 +48,6 @@ class App extends Component {
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="#home">Clicky Game</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">New Game</Nav.Link>
             <Nav.Link>
               <span>Score: {this.state.score}</span>
